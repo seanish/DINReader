@@ -17,6 +17,10 @@ files = os.listdir(folder_path)
 
 for file in files:
 
+    # Skip .DS_Store file
+    if file == '.DS_Store':
+        continue
+
     # Construct the full file path
     file_path = os.path.join(folder_path, file)
     print(file_path)
@@ -44,7 +48,6 @@ for file in files:
         print(f"Image file not found: {output_path}/page_0.png")
 
     #Searching for the drug code
-    re.findall(r'\d+', ocrd_text)
 
     candidates = re.findall(r'\d+', ocrd_text)
 
