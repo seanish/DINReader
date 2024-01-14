@@ -27,7 +27,6 @@ class FolderPathInput(BoxLayout):
         output_path = self.output_path.text
         subprocess.run(["python", "process.py", input_path, output_path])
         print(f'Running process with input path {input_path} and output path {output_path}')
-        # Add your process code here
 
 class ReaderApp(App):
     def build(self):
